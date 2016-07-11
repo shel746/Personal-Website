@@ -1,7 +1,9 @@
+//can set color for cities
 var cities = [{
       title: "Vienna",
       latitude: 48.2092,
-      longitude: 16.3728
+      longitude: 16.3728,
+      //color: "white"
     }, {
       title: "Minsk",
       latitude: 53.9678,
@@ -125,11 +127,12 @@ var cities = [{
     }, {
       title: "Bucharest",
       latitude: 44.4479,
-      longitude: 26.0979
+      longitude: 26.0979,
     }, {
       title: "Moscow",
       latitude: 55.7558,
-      longitude: 37.6176
+      longitude: 37.6176,
+      color: "white"
     }, {
       title: "San Marino",
       latitude: 43.9424,
@@ -207,13 +210,13 @@ var cities = [{
       latitude: 23.7106,
       longitude: 90.3978
     }, {
-      title: "Thimphu",
-      latitude: 27.4405,
-      longitude: 89.6730
+      title: "Los Angeles",
+      latitude: 34.05,
+      longitude: -118.233333
     }, {
-      title: "Bandar Seri Begawan",
-      latitude: 4.9431,
-      longitude: 114.9425
+      title: "Los Gatos",
+      latitude: 37.233333,
+      longitude: -121.95
     }];
 
 // svg path for target icon
@@ -222,7 +225,7 @@ var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z 
 var map = AmCharts.makeChart("chartdiv", {
     type: "map",
     "theme": "none",
-    pathToImages: "http://www.amcharts.com/lib/3/images/",
+    //pathToImages: "http://www.amcharts.com/lib/3/images/",
 
     "balloon": {
         "adjustBorderColor": true,
@@ -254,7 +257,8 @@ setTimeout(
   {
       for(var i = 0; i < cities.length; i ++){
         var city = cities[i];
-        console.dir(city);
+        console.dir(city.title);
+        //console.dir(city.color);
         city.svgPath = targetSVG;
             city.zoomLevel = 5;
             city.scale = 0.5;
