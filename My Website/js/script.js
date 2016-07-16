@@ -16,6 +16,106 @@ var cities = [{
       latitude: 37.233333,
       longitude: -121.95,
       color: "red"
+    }, {
+      title: "London",
+      latitude: 51.5,
+      longitude: 0.116667
+    }, {
+      title: "Florence",
+      latitude: 43.766667,
+      longitude: 11.25
+    }, {
+      title: "Normandy",
+      latitude: 48.866667,
+      longitude: 0.166667
+    }, {
+      title: "Cancun",
+      latitude: 21.15,
+      longitude: -86.90
+    }, {
+      title: "Seattle",
+      latitude: 47.6,
+      longitude: -122.316667
+    }, {
+      title: "Yellowstone",
+      latitude: 44.416667,
+      longitude: -110.583333
+    }, {
+      title: "Yosemite",
+      latitude: 37.85,
+      longitude: -119.533333
+    }, {
+      title: "Grand Canyon",
+      latitude: 36.1,
+      longitude: -112.1
+    }, {
+      title: "Lake Tahoe",
+      latitude: 39.083333,
+      longitude: -120.016667
+    }, {
+      title: "Las Vegas",
+      latitude: 36.166667,
+      longitude: -115.133333
+    }, {
+      title: "Austin",
+      latitude: 30.266667,
+      longitude: -97.733333
+    }, {
+      title: "Purdue University",
+      latitude: 40.45,
+      longitude: -87.05
+    }, {
+      title: "Chicago",
+      latitude: 41.866667,
+      longitude: -87.68
+    }, {
+      title: "Nashville",
+      latitude: 36.15,
+      longitude: -86.766667
+    }, {
+      title: "New York",
+      latitude: 40.7,
+      longitude: -73.9
+    }, {
+      title: "Boston",
+      latitude: 42.35,
+      longitude: -71.05
+    }, {
+      title: "Minneapolis",
+      latitude: 44.966667,
+      longitude: -93.25
+    }, {
+      title: "Orlando",
+      latitude: 28.533333,
+      longitude: -81.366667
+    }, {
+      title: "Honolulu",
+      latitude: 21.35,
+      longitude: -157.85
+    }, {
+      title: "Lahaina",
+      latitude: 20.866667,
+      longitude: -156.666667
+    }, {
+      title: "Jeneau",
+      latitude: 58.3,
+      longitude: -134.416667
+    }, {
+      title: "Anchorage",
+      latitude: 61.216667,
+      longitude: -149.9
+    }, {
+      title: "Denali National Park",
+      latitude: 63.1,
+      longitude: -151.183333
+    }, {
+      title: "Vancouver",
+      latitude: 49.266667,
+      longitude: -123.116667
+    }, {
+      title: "Whistler",
+      latitude: 50.1,
+      longitude: -122.95
     }];
 
 // svg path for target icon
@@ -56,7 +156,7 @@ setTimeout(
   {
       for(var i = 0; i < cities.length; i ++){
         var city = cities[i];
-        console.dir(city.title);
+        console.dir(city.title);    //prints out the city name
         //console.dir(city.color);
         city.svgPath = targetSVG;
             city.zoomLevel = 5;
