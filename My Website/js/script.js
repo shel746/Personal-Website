@@ -116,6 +116,46 @@ var cities = [{
       title: "Whistler",
       latitude: 50.1,
       longitude: -122.95
+    }, {
+      title: "Singapore",
+      latitude: 1.4,
+      longitude: 103.816667,
+      color: "black"
+    }, {
+      title: "Kuala Lumpur",
+      latitude: 3.133333,
+      longitude: 101.683333,
+      color: "black"
+    }, {
+      title: "Phuket",
+      latitude: 7.95,
+      longitude: 98.4,
+      color: "black"
+    }, {
+      title: "Bangkok",
+      latitude: 13.75,
+      longitude: 100.5,
+      color: "black"
+    }, {
+      title: "Phnom Penh",
+      latitude: 11.533333,
+      longitude: 104.883333,
+      color: "black"
+    }, {
+      title: "Ho Chi Minh City",
+      latitude: 10.816667,
+      longitude: 106.616667,
+      color: "black"
+    }, {
+      title: "Hanoi",
+      latitude: 21.016667,
+      longitude: 105.833333,
+      color: "black"
+    }, {
+      title: "Hong Kong",
+      latitude: 22.383333,
+      longitude: 114.2,
+      color: "black"
     }];
 
 // svg path for target icon
@@ -141,11 +181,11 @@ var map = AmCharts.makeChart("chartdiv", {
 
 zoomControl:{buttonFillColor:"#15A892"},
 
-areasSettings:{unlistedAreasColor:"#15A892"},
+areasSettings:{unlistedAreasColor:"#3CB371"},
 
     dataProvider: {
         map: "worldLow",
-        images: []
+        images: [],
     }
     
 });
@@ -166,4 +206,4 @@ setTimeout(
         map.dataProvider.images.push(city);
         map.validateData();
       }
-  }, 10);
+  }, 1);
