@@ -1,4 +1,15 @@
 //can set color for cities
+var toc = [ {
+        title: "Where I'm From",
+        color: "red"
+      }, {
+        title: "Places I've Visited",
+        color: "blue"
+      }, {
+        title: "Planned visit (Summer 2017)",
+        color: "black"
+      }];
+
 var cities = [{
       title: "Paris",
       latitude: 48.8567,
@@ -97,7 +108,7 @@ var cities = [{
       latitude: 20.866667,
       longitude: -156.666667
     }, {
-      title: "Jeneau",
+      title: "Juneau",
       latitude: 58.3,
       longitude: -134.416667
     }, {
@@ -155,7 +166,8 @@ var cities = [{
       title: "Hong Kong",
       latitude: 22.383333,
       longitude: 114.2,
-      color: "black"
+      color: "black",
+      groupId: "future"
     }];
 
 // svg path for target icon
@@ -165,30 +177,51 @@ var map = AmCharts.makeChart("chartdiv", {
     type: "map",
     "theme": "none",
     //pathToImages: "http://www.amcharts.com/lib/3/images/",
+    fontSize: "10px",
 
     "balloon": {
         "adjustBorderColor": true,
         "color": "#000000",
         "cornerRadius": 5,
         "fillColor": "#FFFFFF",
-        //"balloonText": "[[title]]"
-        "enabled": false
+        "balloonText": "[[title]]"
+        //"enabled": false
     },
 
     imagesSettings: {
         color:"blue"
     },
 
-zoomControl:{buttonFillColor:"#15A892"},
+zoomControl:{buttonFillColor:"#3CB371"},
 
 areasSettings:{unlistedAreasColor:"#3CB371"},
 
     dataProvider: {
         map: "worldLow",
         images: [],
-    }
+    },
+
+
+  legend: {
+      width: 240,
+      marginRight:27,
+      marginLeft:27,
+      equalWidths:true,
+      maxColumns: 1,
+      backgroundAlpha: 0.5,
+      backgroundColor: "#FFFFFF",
+      borderColor: "#ffffff",
+      borderAlpha: 1,
+      right: 0,
+      color: "#000000",
+      horizontalGap: 10,
+      switchable: true,
+      data: [],
+  }
     
 });
+
+map.addTitle("Traveling the World", 30, "#000000", 1, true);
 
 //adds the cities in the array cities to the map
 setTimeout(
@@ -205,5 +238,31 @@ setTimeout(
         // add city object to map
         map.dataProvider.images.push(city);
         map.validateData();
+        map.legend.validateNow();
       }
   }, 1);
+
+setTimeout(
+  function(){
+    for(var i = 0; i < toc.length; i ++){
+      var newtoc = toc[i];
+      console.dir(newtoc.title);
+      map.legend.data.push(newtoc);
+      map.validateData();
+    }
+    console.dir(map.legend.data[0]);
+  }, 1);
+
+AmCharts.myHandleLegendClick = function (event) {
+    var groupId = event.dataItem.groupId;
+    if (undefined !== event.dataItem.hidden && event.dataItem.hidden) {
+        event.dataItem.hidden = false;
+        map.showGroup(groupId);
+    }
+    else {
+        event.dataItem.hidden = true;
+        map.hideGroup(groupId);
+    }
+    map.legend.validateNow();
+}
+
