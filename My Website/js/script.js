@@ -221,7 +221,7 @@ areasSettings:{unlistedAreasColor:"#3CB371"},
     
 });
 
-map.addTitle("Traveling the World", 30, "#000000", 1, true);
+map.addTitle("Places I've Been", 30, "#000000", 1, true);
 
 //adds the cities in the array cities to the map
 setTimeout(
