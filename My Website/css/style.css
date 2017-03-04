@@ -44,7 +44,7 @@ section {
 
 .container {
 	width: 100vw;
-	max-width: 800px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 20px;
 }
@@ -142,7 +142,7 @@ a:hover {
 */}
 
 #experience .item {
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 	padding: 20px;
 	line-height: 1.5rem;
 	font-size: 1rem;
@@ -153,13 +153,20 @@ a:hover {
 #experience .item img {
 	float: left;
 	width: 215px;
-	height: 215px;
+	height: 110px;
 	margin-right: 20px;
 }
 
-#experience .item p {
+#experience .item #usc{
+	float: left;
+	width: 235px;
+	height: 80px;
+	margin-right: 20px;
+}
+
+#experience .item h4 {
 	margin: 0 0 10px;
-	font-size: 1.25rem;
+	font-size: 1.75rem;
 }
 
 #experience .item ul {
@@ -170,7 +177,9 @@ a:hover {
 
 #experience .item li {
 	margin: 10px 0;
+	font-size: 1.35rem;
 }
+
 
 /* ===== Projects ==== */
 
