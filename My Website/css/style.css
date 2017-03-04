@@ -121,7 +121,13 @@ a:hover {
 	margin: 1rem auto;
 	text-align: center;
 	font-weight: lighter;
+	color: black;
 	background-image: linear-gradient(to left, hsl(1, 79%, 76%), hsl(197, 67%, 20%));
+}
+#worldmap h2{
+	color:black;
+	text-align: center;
+	font-weight: bold;
 }
 
 /* ===== Experience ==== */
