@@ -232,13 +232,13 @@ setTimeout(
         console.dir(city.title);    //prints out the city name
         //console.dir(city.color);
         city.svgPath = targetSVG;
-            city.zoomLevel = 5;
-            city.scale = 0.5;
+        city.zoomLevel = 5;
+        city.scale = 0.5;
         
         // add city object to map
         map.dataProvider.images.push(city);
         map.validateData();
-        map.legend.validateNow();
+        //map.legend.validateNow();
       }
   }, 1);
 
