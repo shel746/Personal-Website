@@ -8,6 +8,9 @@ var toc = [ {
       }, {
         title: "Planned visit (Summer 2017)",
         color: "black"
+      }, {
+        title: "Where I am Now",
+        color: "yellow"
       }];
 
 var cities = [{
@@ -21,7 +24,8 @@ var cities = [{
     }, {
       title: "Los Angeles",
       latitude: 34.05,
-      longitude: -118.233333
+      longitude: -118.233333,
+      color: "yellow"
     }, {
       title: "Los Gatos",
       latitude: 37.233333,
