@@ -167,13 +167,13 @@ a:hover {
 	float: left;
 	width: 235px;
 	height: 110px;
-	margin-right: 61px;
+	margin-right: 60px;
 }
 #experience .item #cisco{
 	float: left;
 	width: 215px;
 	height: 110px;
-	margin-right: 81px;
+	margin-right: 80px;
 }
 
 #experience .item #usc{
@@ -210,7 +210,7 @@ a:hover {
 	background-blend-mode: darken;*/
 }
 
-#projects .container {
+/*#projects .container {
 	display: flex;
 	justify-content: space-around;
 	align-items: stretch;
@@ -224,7 +224,7 @@ a:hover {
 
 #projects .project img {
 	width: 100%;
-}
+}*/
 
 /* ===== Contact ==== */
 
@@ -239,5 +239,56 @@ a:hover {
 #contact *[class^="icon"] {
 	margin: 0 20px;
 	color: black;
+}
+
+#projects .container{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 10px;
+	display: flex;
+}
+#projects .item{
+	width: 50%;
+	position: relative;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#projects .image {
+  display: block;
+  width: 100%;
+  height: 80%;
+  position: relative;
+  height: auto;
+}
+
+#projects .overlay {
+  position: absolute;
+  top: 5%;
+  bottom: 0;
+  left: 5%;
+  right: 0;
+  height: 90%;
+  width: 90%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  border-radius: 10px;
+}
+
+#projects .item:hover .overlay {
+  opacity: 1;
+}
+
+#projects .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 

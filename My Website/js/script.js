@@ -132,6 +132,18 @@ var cities = [{
       latitude: 50.1,
       longitude: -122.95
     }, {
+      title: "Cabo San Lucas",
+      latitude: 22.89,
+      longitude: -109.91
+    }, {
+      title: "Washington D.C.",
+      latitude: 38.9072,
+      longitude: -77.036
+    }, {
+      title: "Whistler",
+      latitude: 50.1,
+      longitude: -122.95
+    },{
       title: "Singapore",
       latitude: 1.4,
       longitude: 103.816667,
