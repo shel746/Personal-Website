@@ -184,6 +184,12 @@ var cities = [{
       longitude: 114.2,
       color: "black",
       groupId: "future"
+    }, {
+      title: "Bali",
+      latitude: -8.3405,
+      longitude: 115.09,
+      color: "black",
+      groupId: "future"
     }];
 
 // svg path for target icon
