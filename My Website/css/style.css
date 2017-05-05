@@ -265,7 +265,7 @@ a:hover {
   height: auto;
 }
 #projects #three-image {
-	width:400px; /* you can use % */
+	width: 90%;  you can use % 
     height: auto;
     margin-left: 20px;
 }
@@ -296,24 +296,17 @@ a:hover {
 
 #projects .text {
   color: black;
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-10%, -60%);
-  -ms-transform: translate(-10%, -60%);
+  font-size: 2vw;
+  position: relative;
+  top: 40%;
 }
 #projects #one-text{
   line-height: 120%;
-  transform: translate(-10%, -60%);
-  -ms-transform: translate(-10%, -60%);
 }
 
 #projects #two-text{
-  transform: translate(130%, -60%);
-  -ms-transform: translate(130%, -60%);
+  font-size: 3vw;
 }
 #projects #three-text{
-  transform: translate(110%, -60%);
-  -ms-transform: translate(110%, -60%);
+  font-size: 3vw;
 }
